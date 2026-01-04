@@ -1,6 +1,6 @@
 SELECT
   day_of_week,
-  CAST(AVG(births) AS INT64) AS avg_births
+  CAST(AVG(births) AS INT64) AS avg_births_test
 FROM
   playground.us_birth_stats
 GROUP BY
