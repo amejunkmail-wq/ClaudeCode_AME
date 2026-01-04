@@ -1,9 +1,16 @@
 SELECT
-  day_of_week,
-  CAST(AVG(births) AS INT64) AS avg_births_test
+  s.state_name,
+  b.day_of_week,
+  CAST(AVG(b.births) AS INT64) AS avg_births_test
 FROM
-  playground.us_birth_stats
+  playground.us_birth_stats AS b
+JOIN
+  playground.states AS s
+ON
+  b.state = s.state_abbr
 GROUP BY
-  day_of_week
+  s.state_name,
+  b.day_of_week
 ORDER BY
-  day_of_week;
+  s.state_name,
+  b.day_of_week;
