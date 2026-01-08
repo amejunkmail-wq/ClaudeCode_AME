@@ -1,0 +1,9 @@
+# Generated PDF reports
+*.pdf
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
